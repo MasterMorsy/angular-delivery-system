@@ -1,0 +1,103 @@
+.sidebar {
+    .sidebar-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            width: 10%;
+            margin-right: 30px;
+        }
+        .cart-no {
+            background: #F9CE5D;
+            padding: 7px;
+            width: 43px;
+            text-align: center;
+            border-radius: 6px;
+        }
+    }
+    .order-section {
+        margin-top: 75px;
+        .order-address {
+            padding: 12px;
+            color: #dadada;
+            font-size: 0.8rem;
+            background: #51429D;
+            margin-top: 17px;
+            border-radius: 5px;
+            label {
+              color: #f9ce5d;
+              font-weight: bold;
+            }
+            .form-control {
+            background-color: #46464600;
+            border:  none;
+            color: #fff;
+            &::placeholder {
+            color: #fff;
+          }
+          }
+            .edit-btn {
+                color: #F9CE5D;
+                background: none;
+                border: none;
+            }
+        }
+        .order-details {
+            margin-top: 30px;
+            max-height: 300px;
+            height: 300px;
+            overflow-y: scroll;
+            .one-meal {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                span { font-size: 0.9rem; width: 25%;}
+                input { width: 15%;
+                  border: 1px solid #ccc;
+                  font-size: 0.9rem;
+                  height: 21px;
+                  text-align: center;
+                  margin-right: 11px;
+                  margin-left: 15px;
+                }
+                .img-cont { width: 50px;
+                    height: 32px; img {width: 100%; height: 100%;}}
+                    .remove-item {
+                      &:hover {
+                        cursor: pointer;
+                      }
+                    }
+            }
+        }
+        .order-total {
+            margin-top: 40px;
+            .total {
+                display: flex;
+                justify-content: space-around;
+            h4 { font-weight: bold;}
+            }
+            .seperator {
+                width: 90%;
+                display: block;
+                margin-top: auto;
+                height: 1px;
+                background: #ccc;
+            }
+            .checkout-btn {
+                background: #F9CE5D;
+                border: none;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                height: 40px;
+                border-radius: 4px;
+                margin-top: 14px;
+                text-align: center;
+            }
+
+        }
+    }
+}

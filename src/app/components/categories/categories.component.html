@@ -1,0 +1,8 @@
+<section class="categories">
+    <div class="all-categories">
+        <div *ngFor="let category of categories; let i = index" (click)="runTab(category.id)" class="single-category">
+          <img src={{category.image}} alt={{category.name}}>
+          <span>{{category.name}}</span>
+        </div>
+    </div>
+</section>

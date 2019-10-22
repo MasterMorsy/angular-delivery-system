@@ -1,0 +1,48 @@
+<aside class="sidebar">
+    <div class="sidebar-head">
+      <h4>My Order 😎</h4>
+        <!-- <img src="/assets/images/user.png" alt="user"> -->
+        <div class="cart-no">{{cart_no}}</div>
+    </div>
+    <div class="order-section">
+
+        <div class="order-address">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input class="form-control" (change)="change_username($event)" placeholder="username">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <textarea name="address" (change)="change_address($event)" class="form-control" rows="4" style="width: 100%" placeholder="ex: Lorem ipsum dolor sit amet, consectetur adipisicing elit."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone</label>
+            <input type="tel" class="form-control" (change)="change_phone($event)" placeholder="ex: +20 1155490824">
+          </div>
+        </div>
+        <div class="order-details">
+
+            <div *ngFor="let item of cart_items" class="one-meal">
+                <div class="img-cont">
+                    <img src={{item.image}} alt={{item.category.name}}>
+                </div>
+                <input type="number" min="1" max="30" (change)="chnage_item_quantity($event,item.id)" value={{item.quantity}}>
+                <span>{{item.name.slice(0,6)+'..'}}</span>
+                <span>${{item.price}}</span>
+                <span>${{item.price*item.quantity}}</span>
+                <div class="remove-item btn btn-sm btn-danger" (click)="remove_item(item.id)">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="order-total">
+            <div class="total">
+                <span>Total:</span>
+                <h4>${{total_price()}}</h4>
+            </div>
+            <div class="seperator"></div>
+            <a routerLink='/checkout' class="checkout-btn">Checkout</a>
+        </div>
+    </div>
+</aside>

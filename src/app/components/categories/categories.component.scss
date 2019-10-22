@@ -1,0 +1,28 @@
+.categories {
+    margin-top: 50px;
+    .all-categories {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        .single-category {
+          height: 40px;
+          border-radius: 4px;
+          background: #f9ce5c;
+          display: flex;
+          align-items: center;
+          margin-right: 7px;
+          width: 125px;
+            &:hover {
+                box-shadow: 2px 3px 12px 0px rgba(0,0,0,0.1);
+                background: #fff;
+                cursor: pointer;
+            }
+            img {
+              width: 13%;
+              margin-right: 10px;
+              margin-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.banners {
+  margin-top: 40px;
+  .carousel-item {
+    height: 187px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}

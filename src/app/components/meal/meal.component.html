@@ -1,0 +1,15 @@
+<div class="all-meals">
+    <div class="row">
+        <div *ngFor="let meal of meals; let i = index" class="col-md-4 col-sm-2 active meal-contain {{meal.category.id}}" [attr.data-value]="meal.name" (click)="addToCart(meal)">
+            <div class="single-meal">
+                <div class="img-cont" [style.background-image]="'url(' + meal.image + ')'">
+                    <div class="delivert-time">${{meal.price}}</div>
+                </div>
+                <div class="meal-title">
+                    <h6>{{meal.name}}</h6>
+                    <span class="meal-category">{{meal.category.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

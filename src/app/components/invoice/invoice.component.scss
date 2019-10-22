@@ -1,0 +1,14 @@
+.invoice {
+  margin-top: 50px;
+  .details {
+    height: 350px;
+    width: 49%;
+    display: block;
+    border: 2px dotted #656565;
+    margin: auto;
+    padding: 24px;
+    .details-items {
+      td { width: 25%;}
+    }
+  }
+}

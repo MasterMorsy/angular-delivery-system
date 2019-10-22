@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+input, textarea {
+  border: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+button {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+@import "~bootstrap/dist/css/bootstrap.min.css";

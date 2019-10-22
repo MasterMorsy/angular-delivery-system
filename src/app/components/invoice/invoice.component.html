@@ -1,0 +1,26 @@
+<section class="invoice">
+    <div class="details">
+      <h3 class="text-center">Chukwudi 🍟🍕</h3>
+      <table>
+        <tbody>
+            <tr>{{username}}</tr>
+            <tr>{{phone}}</tr>
+            <tr>{{address}}</tr>
+            <tr>5/10/2019 9:15:30AM</tr>
+            <tr>----------------------------------------------------------------</tr>
+        </tbody>
+      </table>
+      <table class="details-items">
+        <tbody>
+          <tr *ngFor="let item of cart_items">
+            <td>{{item.name}}</td>
+            <td>{{item.quantity}}x</td>
+            <td>${{item.price}}</td>
+            <td>${{item.quantity*item.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <span>----------------------------------------------------------------</span>
+      <h4>Total: ${{total}}</h4>
+    </div>
+</section>

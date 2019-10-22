@@ -1,0 +1,48 @@
+.all-meals {
+    min-height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+    .meal-contain {
+      display: none;
+      &.active {
+        display: block;
+       }
+     }
+    .single-meal {
+        margin-bottom: 30px;
+        box-shadow: 2px 3px 12px 0px rgba(0,0,0,0.1);
+        background: #fff;
+        &:hover {
+            cursor: pointer;
+        }
+        .img-cont {
+            height: 116px;
+            border-radius: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            .delivert-time {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-weight: bold;
+                background: #f9ce5d;
+                padding: 0px 11px;
+                border-radius: 0px 9px 0px 0px;
+                font-size: 0.85rem;
+                .light {
+                    font-weight: 300 !important;
+                }
+            }
+        }
+        .meal-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            h6 {font-weight: 200; margin-bottom: 0;}
+            .meal-category{ color: #ccc;}
+        }
+    }
+}

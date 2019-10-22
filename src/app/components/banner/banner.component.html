@@ -1,0 +1,14 @@
+<div class="banners">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div *ngFor="let slide of sliders; let i = index" class="carousel-item" [ngClass]="(i === 0) ? 'active' : ' ' ">
+        <img src={{slide}} alt="..." />
+      </div>
+    </div>
+  </div>
+</div>
